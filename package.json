@@ -1,0 +1,36 @@
+{
+  "name": "roulette-server2",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server for dice rolling simulation",
+  "type": "module",
+  "bin": {
+    "roulette-server2": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamenonagare/roulette-server2.git"
+  },
+  "keywords": [
+    "mcp",
+    "dice",
+    "simulation",
+    "roulette"
+  ],
+  "license": "MIT"
+}
